@@ -71,3 +71,16 @@ router.delete('/delete/:id', async (req, res) => {
         res.status(400).json({ message: error.message })
     }
 })
+
+//Get all Method
+router.post('/userLogin',async (req, res) => {
+    try {
+        console.log(req.body)
+        var query = { email: req.body.email, password: req.body.password };
+        const userLogin = await Model.findOne(query);
+        res.status(200).json({ userLogin });
+    }
+    catch (error) {
+        res.status(400).json({ message: error.message });
+    }
+})

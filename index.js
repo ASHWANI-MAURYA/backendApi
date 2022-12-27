@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const url = 'mongodb://127.0.0.1:27017/Nodejs-api-test'
+const url = 'mongodb://127.0.0.1:27017/PLAN1'
 mongoose.connect(url, { useNewUrlParser: true })
 const database = mongoose.connection;
 database.on('error', (error) => {
@@ -38,5 +38,5 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use('/rinku', routes)
+app.use('/plan1', routes)
 
