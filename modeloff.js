@@ -19,4 +19,4 @@ const dataSchema = new mongoose.Schema({
     }
 })
 
-module.exports = mongoose.model('signIn', dataSchema)
+module.exports = mongoose.model('signOff', dataSchema)

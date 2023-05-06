@@ -16,7 +16,11 @@ const dataSchema = new mongoose.Schema({
     date: {
         required: true,
         type: String
+    },
+    comment: {
+        required: true,
+        type: String
     }
 })
 
-module.exports = mongoose.model('signIn', dataSchema)
+module.exports = mongoose.model('leave-application', dataSchema)
